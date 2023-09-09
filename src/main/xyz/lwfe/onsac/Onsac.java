@@ -12,6 +12,7 @@ public class Onsac {
         final JFrame frame = new JFrame("Onsac");
 
         frame.addWindowListener(new WindowAdapter() {
+
             @Override
             public void windowClosing(WindowEvent event) {
                 super.windowClosing(event);
