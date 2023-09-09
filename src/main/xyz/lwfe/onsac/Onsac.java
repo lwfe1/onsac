@@ -1,4 +1,4 @@
-package xyz.lwfe.onsac;
+package main.xyz.lwfe.onsac;
 
 public class Onsac {
 
