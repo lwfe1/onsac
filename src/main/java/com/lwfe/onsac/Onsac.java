@@ -1,4 +1,4 @@
-package main.xyz.lwfe.onsac;
+package main.java.com.lwfe.onsac;
 
 import javax.swing.*;
 import java.awt.*;
