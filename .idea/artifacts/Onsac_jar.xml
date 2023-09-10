@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Onsac:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Onsac_jar</output-path>
+    <root id="archive" name="Onsac.jar">
+      <element id="module-output" name="Onsac" />
+    </root>
+  </artifact>
+</component>
