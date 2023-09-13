@@ -1,4 +1,4 @@
-package main.java.com.lwfe.onsac;
+package com.lwfe.onsac;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,6 +24,10 @@ public class Onsac {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
+
+        ImageIcon icon = new ImageIcon("icon.png");
+        frame.setIconImage(icon.getImage());
+
         frame.setVisible(true);
     }
 
