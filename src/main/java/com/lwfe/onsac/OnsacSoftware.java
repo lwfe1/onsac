@@ -9,8 +9,12 @@ import java.net.URL;
 public class OnsacSoftware {
 
     public void createAndLaunchOnsac() {
-        final JFrame frame = new JFrame("OnsacSoftware");
-        final Buttons buttons = new Buttons();
+
+        final int height = 600;
+        final int width = 800;
+
+        final ApplicationWindow application = new ApplicationWindow();
+        final JFrame frame = new JFrame("Onsac");
         final URL filepath = getClass().getClassLoader().getResource("icon.png");
 
         frame.addWindowListener(new WindowAdapter() {
@@ -22,11 +26,12 @@ public class OnsacSoftware {
             }
         });
 
-        frame.setContentPane(buttons);
+        frame.setContentPane(application);
+        application.setBackground(Color.BLACK);
         frame.pack();
-        frame.setSize(new Dimension(800, 600));
-        frame.setLocationRelativeTo(null);
         frame.setResizable(false);
+        frame.setSize(new Dimension(width, height));
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
         if (filepath != null) {
