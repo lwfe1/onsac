@@ -4,8 +4,8 @@ import javax.swing.*;
 
 public class Buttons extends JPanel {
 
-    private JButton yesButton;
-    private JButton noButton;
+    private final JButton yesButton;
+    private final JButton noButton;
 
     public Buttons() {
 
