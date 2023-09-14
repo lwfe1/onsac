@@ -5,6 +5,8 @@ import java.awt.*;
 
 public class OnsacSoftware extends JPanel {
 
+    public MousePositionTracking tracking = new MousePositionTracking();
+
     public int width;
     public int height;
 
@@ -14,5 +16,6 @@ public class OnsacSoftware extends JPanel {
         this.setPreferredSize(new Dimension(width, height));
         this.setBackground(Color.BLACK);
         this.setDoubleBuffered(true);
+        this.addMouseMotionListener(tracking);
     }
 }
