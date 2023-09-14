@@ -9,7 +9,7 @@ import java.net.URL;
 public class Onsac {
 
     public void launch() {
-        final OnsacSoftware software = new OnsacSoftware(800, 600);
+        final OnsacSoftware software = new OnsacSoftware();
         final JFrame frame = new JFrame("Onsac");
         final URL filepath = getClass().getClassLoader().getResource("icon.png");
 
@@ -24,10 +24,10 @@ public class Onsac {
 
         frame.add(software);
         frame.pack();
+        software.setPreferredSize(new Dimension(800, 600));
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
-
 
         if (filepath != null) {
 
