@@ -1,4 +1,4 @@
-package com.lwfe.onsac.components;
+package com.lwfe.onsac;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
