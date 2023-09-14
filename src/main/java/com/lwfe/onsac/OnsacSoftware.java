@@ -1,5 +1,7 @@
 package com.lwfe.onsac;
 
+import com.lwfe.onsac.components.MousePositionTracking;
+
 import javax.swing.*;
 import java.awt.*;
 

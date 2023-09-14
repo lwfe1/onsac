@@ -30,9 +30,11 @@ public class Onsac {
 
 
         if (filepath != null) {
+
             ImageIcon icon = new ImageIcon(filepath);
             frame.setIconImage(icon.getImage());
             System.out.println("Icon loaded successfully");
+
         } else {
             System.out.println("Icon not found");
         }
