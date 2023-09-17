@@ -19,8 +19,8 @@ public class MouseHoverListener extends MouseAdapter {
         int x, y;
 
         Random random = new Random();
-        x = random.nextInt(700);
-        y = random.nextInt(500);
+        x = random.nextInt(600);
+        y = random.nextInt(400);
         button.setLocation(x, y);
     }
 }

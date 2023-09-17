@@ -20,8 +20,8 @@ public class OnsacSoftware {
 
         JButton yes = new JButton();
         yes.setText("Yes");
-        yes.addActionListener(e ->
-            JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
+        yes.addActionListener(
+            e -> JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
         ));
         yes.setFocusable(false);
 
