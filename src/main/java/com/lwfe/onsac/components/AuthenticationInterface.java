@@ -18,17 +18,18 @@ public class AuthenticationInterface extends JFrame {
         final URL filepath = getClass().getClassLoader().getResource("icon.png");
 
         this.setTitle("Onsac v1.0");
-        this.setLayout(new FlowLayout());
-        this.addWindowListener(new WindowAdapter() {
+        this.setLayout(new BorderLayout());
 
+        this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);
                 System.exit(0);
             }
         });
+
         this.initInsideComponents();
-        this.pack();
+
         this.setSize(new Dimension(800, 600));
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -37,41 +38,39 @@ public class AuthenticationInterface extends JFrame {
         noButton.addMouseListener(new MouseHoverListener(noButton));
 
         if (filepath != null) {
-
             ImageIcon icon = new ImageIcon(filepath);
             this.setIconImage(icon.getImage());
             System.out.println("Icon loaded successfully 👍");
-
         } else {
             System.out.println("Icon not found 😔");
         }
     }
 
     private void initInsideComponents() {
-
-        add(Box.createVerticalStrut(100));
-        add(Box.createHorizontalStrut(25));
+        final JPanel questionPosition = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        final JPanel buttonPosition = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         JLabel question = new JLabel();
-        question.setFont(new Font("Arial", Font.BOLD, 20));
-        question.setText("Are you gay?");
-        add(question);
+        question.setFont(new Font("Segoe UI", Font.BOLD, 36));
+        question.setText("ARE YOU GAY?");
+
+        questionPosition.add(question);
+        add(questionPosition, BorderLayout.NORTH);
 
         JButton yes = new JButton();
         yes.setText("Yes");
-
         yes.addActionListener(e ->
             JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
         ));
-
         yes.setFocusable(false);
-        add(yes);
-
-        add(Box.createVerticalStrut(50));
 
         noButton = new JButton();
         noButton.setText("No");
         noButton.setFocusable(false);
-        add(noButton);
+
+        buttonPosition.add(yes);
+        buttonPosition.add(noButton);
+        buttonPosition.setBorder(BorderFactory.createEmptyBorder(50, 0, 0, 0));
+        add(buttonPosition, BorderLayout.CENTER);
     }
 }
