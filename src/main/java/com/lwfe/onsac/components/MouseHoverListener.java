@@ -1,4 +1,14 @@
 package com.lwfe.onsac.components;
 
-public class MouseHoverListener {
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class MouseHoverListener extends MouseAdapter {
+
+    @Override
+    public void mouseEntered(MouseEvent event) {
+        super.mouseEntered(event);
+
+
+    }
 }
