@@ -35,6 +35,8 @@ public class AuthenticationInterface {
         frame.setResizable(false);
         frame.setVisible(true);
 
+        no.addMouseListener(new MouseHoverListener(no));
+
         if (filepath != null) {
 
             ImageIcon icon = new ImageIcon(filepath);
