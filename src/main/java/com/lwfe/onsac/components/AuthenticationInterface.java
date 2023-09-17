@@ -31,8 +31,8 @@ public class AuthenticationInterface {
 
         frame.pack();
         frame.setSize(new Dimension(800, 600));
-        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
         frame.setVisible(true);
 
         if (filepath != null) {
