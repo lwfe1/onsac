@@ -1,10 +1,10 @@
 package com.lwfe.onsac;
 
-import javax.swing.*;
+import com.lwfe.onsac.components.AuthenticationInterface;
 
 public class Onsac {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(OnsacSoftware::createAndShowGUI);
+        new AuthenticationInterface();
     }
 }
