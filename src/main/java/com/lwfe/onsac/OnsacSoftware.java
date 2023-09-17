@@ -8,7 +8,6 @@ import java.awt.*;
 public class OnsacSoftware {
 
     public void initInsideComponents(AuthenticationInterface auth) {
-
         final JPanel questionPosition = new JPanel(new FlowLayout(FlowLayout.CENTER));
         final JPanel buttonPosition = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
@@ -22,8 +21,8 @@ public class OnsacSoftware {
         JButton yes = new JButton();
         yes.setText("Yes");
         yes.addActionListener(e ->
-                JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
-                ));
+            JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
+        ));
         yes.setFocusable(false);
 
         JButton noButton = new JButton();
