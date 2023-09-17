@@ -6,21 +6,20 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.net.URL;
 
-public class AuthenticationInterface {
+public class AuthenticationInterface extends JFrame {
 
-    private JLabel question;
-    private JButton no;
-    private JButton yes;
+    private JButton noButton;
 
     public AuthenticationInterface() {
         initComponent();
     }
 
     private void initComponent() {
-        final JFrame frame = new JFrame("Onsac v1.0");
         final URL filepath = getClass().getClassLoader().getResource("icon.png");
 
-        frame.addWindowListener(new WindowAdapter() {
+        this.setTitle("Onsac v1.0");
+        this.setLayout(new FlowLayout());
+        this.addWindowListener(new WindowAdapter() {
 
             @Override
             public void windowClosing(WindowEvent e) {
@@ -28,23 +27,48 @@ public class AuthenticationInterface {
                 System.exit(0);
             }
         });
+        this.initInsideComponents();
+        this.pack();
+        this.setSize(new Dimension(800, 600));
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.setVisible(true);
 
-        frame.pack();
-        frame.setSize(new Dimension(800, 600));
-        frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
-        frame.setVisible(true);
-
-        no.addMouseListener(new MouseHoverListener(no));
+        noButton.addMouseListener(new MouseHoverListener(noButton));
 
         if (filepath != null) {
 
             ImageIcon icon = new ImageIcon(filepath);
-            frame.setIconImage(icon.getImage());
+            this.setIconImage(icon.getImage());
             System.out.println("Icon loaded successfully 👍");
 
         } else {
             System.out.println("Icon not found 😔");
         }
+    }
+
+    private void initInsideComponents() {
+
+        add(Box.createVerticalStrut(200));
+
+        JLabel question = new JLabel();
+        question.setFont(new Font("Arial", Font.BOLD, 28));
+        question.setText("Are you gay?");
+        add(question);
+
+        JButton yes = new JButton();
+        yes.setText("Yes");
+
+        yes.addActionListener(e ->
+            JOptionPane.showMessageDialog(null, "Caught on 4k 📷"
+        ));
+
+        yes.setFocusable(false);
+        add(yes);
+
+        noButton = new JButton();
+        noButton.setText("No");
+        noButton.setFocusable(false);
+        add(noButton);
     }
 }
