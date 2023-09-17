@@ -49,10 +49,10 @@ public class AuthenticationInterface extends JFrame {
 
     private void initInsideComponents() {
 
-        add(Box.createVerticalStrut(200));
-
+        add(Box.createHorizontalStrut(25));
+        add(Box.createVerticalStrut(50));
         JLabel question = new JLabel();
-        question.setFont(new Font("Arial", Font.BOLD, 28));
+        question.setFont(new Font("Arial", Font.BOLD, 20));
         question.setText("Are you gay?");
         add(question);
 
