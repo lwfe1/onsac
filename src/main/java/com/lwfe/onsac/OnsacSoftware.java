@@ -13,7 +13,7 @@ public class OnsacSoftware {
 
         JLabel question = new JLabel();
         question.setFont(new Font("Segoe UI", Font.BOLD, 36));
-        question.setText("ARE YOU GAY?");
+        question.setText("Are you gay?");
 
         questionPosition.add(question);
         auth.add(questionPosition, BorderLayout.NORTH);

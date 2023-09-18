@@ -17,7 +17,7 @@ public class AuthenticationInterface extends JFrame {
     private void initComponent() {
         final URL filepath = getClass().getClassLoader().getResource("icon.png");
 
-        this.setTitle("Onsac v1.0");
+        this.setTitle("Onsac v1.1");
         this.setLayout(new BorderLayout());
 
         this.addWindowListener(new WindowAdapter() {
