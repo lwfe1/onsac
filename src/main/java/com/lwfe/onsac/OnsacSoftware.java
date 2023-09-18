@@ -31,7 +31,7 @@ public class OnsacSoftware {
 
         buttonPosition.add(yes);
         buttonPosition.add(noButton);
-        buttonPosition.setBorder(BorderFactory.createEmptyBorder(50, 0, 0, 0));
+        buttonPosition.setBorder(BorderFactory.createEmptyBorder(25, 0, 0, 0));
         auth.add(buttonPosition, BorderLayout.CENTER);
         auth.setNoButton(noButton);
     }
