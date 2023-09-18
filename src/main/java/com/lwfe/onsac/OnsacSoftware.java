@@ -12,7 +12,7 @@ public class OnsacSoftware {
         final JPanel buttonPosition = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
         JLabel question = new JLabel();
-        question.setFont(new Font("Segoe UI", Font.BOLD, 36));
+        question.setFont(new Font("Arial", Font.BOLD, 28));
         question.setText("Are you gay?");
 
         questionPosition.add(question);
